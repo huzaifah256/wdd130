@@ -1,216 +1,86 @@
-/* CSS Variables from Site Plan */
-:root {
-    --primary-color: #0c4a6e;
-    --secondary-color: #e0f2fe;
-    --accent1-color: #38bdf8;
-    --accent2-color: #fbbf24;
-    --heading-font: 'Poppins', sans-serif;
-    --text-font: 'Roboto', sans-serif;
-}
-
-/* Global Styles */
-* {
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-body {
-    font-family: var(--text-font);
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+/* Header Styling */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
-h1, h2 {
-    font-family: var(--heading-font);
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
 
-img {
-    max-width: 100%;
+/* Main Section - Limited Width as Required */
+main {
+    width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Main Image Selector - More Specific as Required */
+main img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
+/* Aside Element - All Required Properties */
+aside {
+    width: 300px;
+    margin: 20px auto;
+    border: 2px solid #34495e;
+    padding: 20px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Aside Image - Specific Width and Auto Height */
+aside img {
+    width: 200px;
     height: auto;
     display: block;
+    margin: 15px auto;
+    border-radius: 5px;
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem 2rem;
-}
-
-header img {
-    height: 60px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Hero Section - Positioned relative with absolute children */
-.hero {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-}
-
-.hero > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1.5rem;
-    border-radius: 10px;
-    color: white;
-    z-index: 2;
-}
-
-/* Hero article image floated right */
-.hero article img {
-    float: right;
-    width: 150px;
-    height: 100px;
-    object-fit: cover;
-    margin-left: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
-}
-
-.hero article p {
+/* Paragraph Styling - Zero Padding as Required */
+p {
+    padding: 0;
+    margin: 15px 0;
     text-align: justify;
 }
 
-/* History Section */
-.history {
-    padding: 3rem 2rem;
-    background-color: var(--secondary-color);
-    text-align: center;
-}
-
-.history h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.history p {
-    max-width: 900px;
-    margin: auto;
-    text-align: left;
-    font-size: 1.1rem;
-}
-
-/* Adventures Section */
-.adventures {
-    padding: 3rem 2rem;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-.adventures h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-}
-
-.adventures img {
-    display: inline-block;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.adventures img:hover {
-    transform: scale(1.05);
-}
-
-/* Footer */
+/* Footer Styling - All Required Properties */
 footer {
-    background-color: var(--primary-color);
-    color: white;
+    margin-top: 30px;
+    border-top: 3px solid #2c3e50;
     text-align: center;
-    padding: 1.5rem 2rem;
-    margin-top: 2rem;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
 }
 
-footer p {
-    margin-bottom: 1rem;
+/* Additional Styling for Better Appearance */
+h1, h2 {
+    color: #2c3e50;
 }
 
-/* Social media links - no text decoration */
-.sociallinks a {
-    text-decoration: none;
-}
-
-.sociallinks a img {
-    width: 30px;
-    margin: 0 0.5rem;
-    vertical-align: middle;
-    transition: opacity 0.3s ease;
-}
-
-.sociallinks a img:hover {
-    opacity: 0.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero article {
-        position: static;
-        margin-top: 2rem;
-    }
-
-    .hero article img {
-        float: none;
-        display: block;
-        margin: 0 auto 1rem auto;
-    }
-
-    .adventures img {
-        display: block;
-        margin: 1rem auto;
-    }
+aside h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #2980b9;
 }
